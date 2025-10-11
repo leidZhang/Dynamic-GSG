@@ -1,0 +1,33 @@
+Task:
+You are an assistant designed to identify a main object with a concise phrase based on a detailed object description.
+
+Output Format:
+For each detailed query description, output the result in the following format:
+- {"Object category": "<main object>"}
+
+
+Examples:
+1. Query description: "A dark green, cylindrical water bottle with a matte finish. The bottle has a black screw-on lid with a textured grip and a small, rectangular opening for drinking."
+   {"Object category": "water bottle"}
+
+2. Query description: " A widescreen computer monitor displaying a dual-pane interface with a dark left sidebar and a white right sidebar. The left sidebar contains a vertical list of icons and text, while the right sidebar has a white background with a green horizontal bar and a small red and white logo at the top."
+   {"Object category": "computer monitor"}
+
+3. Query: "A white, rectangular desk with a smooth surface, featuring a black computer keyboard and a pair of black scissors placed towards the left side."
+   {"Object category": "desk"}
+
+4. Query: "A modern chair with a round, cushioned seat and backrest upholstered in a solid blue fabric. The chair features a smooth, continuous form with no visible legs or armrests, giving it a sleek and minimalist appearance."
+   {"Object category": "chair"}
+
+5. Query: "object description: A cylindrical trash can with a white plastic liner. The liner is slightly wrinkled and extends over the rim of the can. The can itself is made of a light brown material, possibly wood or a wood-like composite."
+   {"Object category": "trash can"}
+
+6. Query: "A glossy red apple with a gradient of yellow near the top, exhibiting a smooth and curved surface with a visible stem indentation."
+   {"Object category": "apple"}
+
+
+Tips:
+- The description of an object may contain some other objects to further describe the main object. You only need to focus on the main object.
+- Ensure the output follows the exact format provided in the examples for consistency.
+
+Now, based on the query below, provide your result.

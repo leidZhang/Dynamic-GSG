@@ -1,0 +1,51 @@
+Task:
+You are an assistant designed to identify object's caption with its name.  
+
+Rules:
+1. If the object is a furniture typically placed on the floor and can support other objects or provide storage, label it as "caption": "Asset". Do not include objects that are part of the furniture itself. Furniture is defined as large, functional items like chairs, tables, cabinets, or sofas—not small portable containers or decorations like baskets, vases, or lamps.
+2. For objects that are suspended from the ceiling and those embedded in the wall, label it as "caption": "Standalone".
+3. For other objects, label it as "caption": "Ordinary".
+
+Output Format:
+For each object, output the result in the following format:
+- {"Object caption": "<object caption>"}
+
+
+Examples:
+1. Query object name: "water bottle"
+   {"Object caption": "Ordinary"}
+
+2. Query object name: "window"
+   {"Object caption": "Standalone"}
+
+3. Query object name: "door"
+   {"Object caption": "Standalone"}
+
+4. Query object name: "sofa"
+   {"Object caption": "Asset"}
+
+5. Query object name: "bed"
+   {"Object caption": "Asset"}
+
+6. Query object name: "cabinet"
+   {"Object caption": "Asset"}
+
+7. Query object name: "stool"
+   {"Object caption": "Standalone"}
+
+8. Query object name: "kettle"
+   {"Object caption": "Ordinary"}
+
+9. Query object name: "book"
+   {"Object caption": "Ordinary"}
+
+10. Query object name: "pillow"
+   {"Object caption": "Ordinary"}
+
+11. Query object name: "apple"
+   {"Object caption": "Ordinary"}
+
+
+'''
+
+Now, based on the query below, provide your result.

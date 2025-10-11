@@ -1,0 +1,10 @@
+dataset_name: 'hislam'
+camera_params:
+  image_height: 480
+  image_width: 640
+  fx: 384.903564453125
+  fy: 384.38653564453125
+  cx: 321.3509521484375
+  cy: 243.61941528320312
+  png_depth_scale: 1000.0
+  crop_edge: 0
