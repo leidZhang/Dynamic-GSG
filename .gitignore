@@ -13,3 +13,4 @@ scripts/export_ply.py
 viz_scripts/gs_mindv2.py
 viz_scripts/gs_mind.py
 dgsg/*
+.DS_Store

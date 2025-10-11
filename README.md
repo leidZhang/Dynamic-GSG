@@ -59,8 +59,9 @@ conda install cuda-toolkit==12.1.1 -c conda-forge
 conda install opencv -c conda-forge
 pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu121
 
-git clone --recursive https://github.com/GeLuzhou/Dynamic-GSG.git
+git clone https://github.com/GeLuzhou/Dynamic-GSG.git
 cd Dynamic-GSG
+git submodule update --init --recursive
 
 export CUDA_HOME=/your/env/path/of/dgsg
 export PATH=$CUDA_HOME/bin:$PATH
