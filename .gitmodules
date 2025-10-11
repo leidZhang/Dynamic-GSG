@@ -1,3 +1,6 @@
-[submodule "diff-gaussian-rasterization-w-depth"]
-	path = diff-gaussian-rasterization-w-depth
+[submodule "submodules/diff-gaussian-rasterization-w-depth"]
+	path = submodules/diff-gaussian-rasterization-w-depth
 	url = https://github.com/JonathonLuiten/diff-gaussian-rasterization-w-depth.git
+[submodule "submodules/GroundingDINO"]
+	path = submodules/GroundingDINO
+	url = https://github.com/IDEA-Research/GroundingDINO.git
