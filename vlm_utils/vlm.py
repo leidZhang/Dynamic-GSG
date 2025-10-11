@@ -396,6 +396,9 @@ def descriptive_query_with_llm(objects: MapObjectList, query: str, scene_graph: 
 
     return vlm_answer
 
+openai_client = OpenAI(
+    api_key="your openai api key"
+)
 
 gpt_model = "gpt-4o-mini"
 
