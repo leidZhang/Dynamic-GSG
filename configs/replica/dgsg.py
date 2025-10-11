@@ -132,12 +132,12 @@ config = dict(
     ),
     lang=dict(
         use_lang=True,
-        detection_model="groundingdino", # ["groundingdino", "yolo"]
+        detection_model="yolo", # ["groundingdino", "yolo"]
         color_book_path="./configs/scannet200.txt",
         yolo_model_path="./models/yolov8l-world.pt",
         grounding_dino_config_path="./dgsg/navigation/groundingdino/config/GroundingDINO_SwinT_OGC.py",
         grounding_dino_checkpoint_path="./models/groundingdino_swint_ogc.pth",
-        ram_model_path="/home/coastzz/codes/recognize-anything/pretrained/ram_plus_swin_large_14m.pth",
+        ram_model_path="./models/ram_plus_swin_large_14m.pth",
         sam_model_path='./models/sam_l.pt',
         dam_model_path='nvidia/DAM-3B', 
         dam_conv_mode="v1", 

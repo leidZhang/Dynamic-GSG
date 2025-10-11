@@ -563,7 +563,6 @@ def dgsg(config: dict):
         ignore_bad=dataset_config["ignore_bad"],
         use_train_split=dataset_config["use_train_split"],
     )
-    print(dataset.poses[0])
     num_frames = dataset_config["num_frames"]
     if num_frames == -1:
         num_frames = len(dataset)
@@ -571,6 +570,16 @@ def dgsg(config: dict):
     if lf_config['use_lang']:
 
         color_book = read_color_book(lf_config['color_book_path'])
+
+        # Set the classes for thef detection model
+        obj_classes = ObjectClasses(
+            classes_file_path=lf_config['classes_file'], 
+            bg_classes=lf_config['bg_classes'], 
+            skip_bg=lf_config['skip_bg']
+        )
+
+        models_dir = "./models"
+        os.makedirs(models_dir, exist_ok=True)
 
         # Load Detection Model
         if lf_config['detection_model'] == 'groundingdino':
@@ -589,22 +598,14 @@ def dgsg(config: dict):
         sam_predictor = SAM(lf_config["sam_model_path"])
 
         clip_model, _, clip_preprocess = open_clip.create_model_and_transforms(
-            "ViT-H-14", lf_config['clip_model_path']
+            "ViT-H-14", "laion2b_s32b_b79k"
         )
         clip_model = clip_model.to('cuda')
         clip_tokenizer = open_clip.get_tokenizer("ViT-H-14")
 
-        # Set the classes for thef detection model
-        obj_classes = ObjectClasses(
-            classes_file_path=lf_config['classes_file'], 
-            bg_classes=lf_config['bg_classes'], 
-            skip_bg=lf_config['skip_bg']
-        )
         
         ai_client = OpenAI(
-            # 若没有配置环境变量，请用百炼API Key将下行替换为：api_key="sk-xxx",
-            api_key=os.getenv("DASHSCOPE_API_KEY"),
-            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+            api_key="YOUR QWEN API KEY",
         )
 
     # Init

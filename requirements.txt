@@ -15,7 +15,7 @@ pytorch-msssim
 plyfile==0.8.1
 faiss-cpu==1.8.0,
 numpy==1.24.2,
-openai==1.33.0,
+openai
 open_clip_torch==2.26.1,
 urllib3==2.2.3,
 scipy==1.14.1,
