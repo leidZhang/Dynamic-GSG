@@ -171,10 +171,15 @@ This work is built on many amazing research works and open-source projects, than
 ### Citation
 If you find our paper and code useful, please cite us:
 ```bibtex
-@article{ge2025dynamicgsg,
-  title={DynamicGSG: Dynamic 3D Gaussian Scene Graphs for Environment Adaptation},
+@INPROCEEDINGS{11246569,
   author={Ge, Luzhou and Zhu, Xiangyu and Yang, Zhuo and Li, Xuesong},
-  journal={arXiv preprint arXiv:2502.15309},
-  year={2025}
+  booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  title={DynamicGSG: Dynamic 3D Gaussian Scene Graphs for Environment Adaptation}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={2232-2239},
+  keywords={Three-dimensional displays;Navigation;Source coding;Semantic segmentation;Semantics;Rendering (computer graphics);Indoor environment;Intelligent agents;Intelligent robots},
+  doi={10.1109/IROS60139.2025.11246569}
 }
 ```
