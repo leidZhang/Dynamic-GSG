@@ -4,3 +4,6 @@
 [submodule "submodules/GroundingDINO"]
 	path = submodules/GroundingDINO
 	url = https://github.com/IDEA-Research/GroundingDINO.git
+[submodule "submodules/describe-anything"]
+	path = submodules/describe-anything
+	url = https://github.com/NVlabs/describe-anything.git
