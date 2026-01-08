@@ -56,7 +56,7 @@ config = dict(
         start=0,
         end=-1,
         stride=10,
-        num_frames=200,
+        num_frames=10, # 200,
         ignore_bad = False,
         use_train_split = True,
     ),

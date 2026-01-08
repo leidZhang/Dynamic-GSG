@@ -1389,7 +1389,7 @@ def save_keyframe_list(keyframe_list: list, output_dir):
 
 
 def save_objects(params, objects: MapObjectList, dataset, ai_client, lf_config, output_dir):
-
+    # TODO: MIssing needed prompts here
     prompt_modes = {
             "focal_prompt": "full+focal_crop",
         }
@@ -1441,11 +1441,15 @@ def save_objects(params, objects: MapObjectList, dataset, ai_client, lf_config, 
             {"role": "user", "content": [{"type": "text", "text": obj_category_parse_prompt}]},
         ]
         chat_response = ai_client.chat.completions.create(
-            model="qwen2.5-vl-72b-instruct", messages=messages
+            # model="qwen2.5-vl-72b-instruct", messages=messages # TODO: Move to config later
+            model="qwen3-vl-32b-instruct", messages=messages # TODO: Move to config later
         )
         answer = chat_response.choices[0].message.content
         answer = answer.replace("'", '"')
-        answer = json.loads(answer)
+        answer = json.loads(answer) # NOTE: When using qwen3-vl, the returned answer is a list
+        
+        print(answer)
+        
         obj['category'] = answer['Object category']
 
         obj_caption_parse_prompt = f"Query caption: {obj['category']}"
@@ -1454,10 +1458,14 @@ def save_objects(params, objects: MapObjectList, dataset, ai_client, lf_config, 
             {"role": "user", "content": [{"type": "text", "text": obj_caption_parse_prompt}]},
         ]
         chat_response = ai_client.chat.completions.create(
-            model="qwen2.5-vl-72b-instruct", messages=messages
+            # model="qwen2.5-vl-72b-instruct", messages=messages # TODO: Move to config later
+            model="qwen3-vl-32b-instruct", messages=messages # TODO: Move to config later
         )
         answer = chat_response.choices[0].message.content
         answer = answer.replace("'", '"')
+        
+        print(answer)
+        
         answer = json.loads(answer)
         obj['caption'] = answer['Object caption']
     

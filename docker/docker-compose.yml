@@ -22,7 +22,7 @@ services:
       - /nvme2n1p1/hao/Replica:/workspace/Dynamic-GSG/data/Replica  # Mount the Replica dataset
       - /nvme2n1p1/hao/weights:/workspace/Dynamic-GSG/models # Mount the weights directory
       - /tmp/.X11-unix:/tmp/.X11-unix:rw  # Mount the X11 socket
-
+    working_dir: /workspace/Dynamic-GSG
     deploy:
       resources:
         reservations:
