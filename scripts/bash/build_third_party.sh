@@ -13,15 +13,14 @@ git submodule update --init --recursive
 
 # Build DiffGaussianRasterizationWDepth
 cd submodules/diff-gaussian-rasterization-w-depth
-python3 -m pip install . 
+python3 -m pip install  --no-build-isolation -v . 
 
 # Build GroundingDINO
 cd ../GroundingDINO
-python3 -m pip install .
-
+python3 -m pip install --no-build-isolation -v .
 # Build DescribeAnything
 cd ../describe-anything
-python3 -m pip install -v .
+python3 -m pip install --no-build-isolation -v .
 
 # Build and install other third-party dependencies
-python3 -m pip install -r ../../requirements.txt
+python3 -m pip install --no-build-isolation -r ../../requirements.txt

@@ -563,7 +563,7 @@ def dgsg(config: dict):
         ignore_bad=dataset_config["ignore_bad"],
         use_train_split=dataset_config["use_train_split"],
     )
-    num_frames = dataset_config["num_frames"]
+    num_frames = 10 # dataset_config["num_frames"]
     if num_frames == -1:
         num_frames = len(dataset)
 
@@ -605,7 +605,8 @@ def dgsg(config: dict):
 
         
         ai_client = OpenAI(
-            api_key="YOUR QWEN API KEY",
+            api_key=os.environ['QWEN_API_KEY'],
+            base_url="https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
         )
 
     # Init

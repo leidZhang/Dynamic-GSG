@@ -33,7 +33,7 @@ RUN apt-get update && apt-get install -y \
 && apt-get clean
 
 # Upgrade pip, setuptools, and wheel
-RUN python3 -m pip install --upgrade pip setuptools wheel
+RUN python3 -m pip install --upgrade pip setuptools wheel packaging
 
 # Install specific version of pip packages
 RUN python3 -m pip install \

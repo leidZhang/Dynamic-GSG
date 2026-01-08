@@ -532,7 +532,7 @@ def visualize(scene_path, objects_path, config, viz_cfg, lf_cfg, data_cfg):
     if not viz_cfg["no_clip"]:
         print("Initializing CLIP model...")
         clip_model, _, clip_preprocess = open_clip.create_model_and_transforms(
-            "ViT-H-14", viz_cfg['clip_model_path']
+            "ViT-H-14", pretrained=viz_cfg['clip_model_path']
         )
         clip_model = clip_model.to('cuda')
         clip_tokenizer = open_clip.get_tokenizer("ViT-H-14")
